@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shy/Desktop/Bluetooth/Blue.cpp
+/home/shy/Desktop/Serial/Blue.cpp
 pigpio.h
 -
 iostream

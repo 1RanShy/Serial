@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shy/Desktop/Bluetooth/Blue.cpp" "/home/shy/Desktop/Bluetooth/build/CMakeFiles/main.dir/Blue.cpp.o"
+  "/home/shy/Desktop/Serial/Blue.cpp" "/home/shy/Desktop/Serial/build/CMakeFiles/main.dir/Blue.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

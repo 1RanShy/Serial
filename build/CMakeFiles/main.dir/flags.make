@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/shy/Desktop/Bluetooth/include
+CXX_INCLUDES = -I/home/shy/Desktop/Serial/include
 
 CXX_FLAGS = 
 
