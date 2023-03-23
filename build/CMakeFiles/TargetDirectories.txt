@@ -1,0 +1,3 @@
+/home/shy/Desktop/Bluetooth/build/CMakeFiles/rebuild_cache.dir
+/home/shy/Desktop/Bluetooth/build/CMakeFiles/edit_cache.dir
+/home/shy/Desktop/Bluetooth/build/CMakeFiles/main.dir
