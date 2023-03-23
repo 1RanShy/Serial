@@ -5,13 +5,14 @@ using namespace std;
 
 void sendByte(unsigned int x)
 {
-    serWriteByte(x,6);serWriteByte(x,77);
+    serWriteByte(x, 6);
+    serWriteByte(x, 77);
     gpioSleep(PI_TIME_RELATIVE, 1, 500000); // sleep for 1.5
 }
 
 void readByte(unsigned x)
 {
-    if(serDataAvailable(x)>0)
+    if (serDataAvailable(x) > 0)
         cout << serReadByte(x) << endl;
     gpioSleep(PI_TIME_RELATIVE, 0, 500000);
     /*
@@ -21,18 +22,18 @@ void readByte(unsigned x)
 
 int main(void)
 {
-    if (gpioInitialise() < 0) 
+    if (gpioInitialise() < 0)
     {
         cout << "Failed" << endl;
-    } 
-    else 
+    }
+    else
     {
         cout << "PIGPIO is ready" << endl;
     }
-    
-    unsigned int x = serOpen("/dev/ttyS0", 9600, 0) ;
-    cout << x <<endl;
-    
+
+    unsigned int x = serOpen("/dev/ttyS0", 9600, 0);
+    cout << x << endl;
+
     if (x < 0)
     {
         cout << "Fail to open Serial port." << endl;
@@ -53,16 +54,13 @@ int main(void)
         }
         cout<<serDataAvailable(x)<< endl;
         */
-        if(serDataAvailable(x))
+        if (serDataAvailable(x)) // 先判断有没有数据读
         {
-            while(serDataAvailable(x))
-            {
-                cout << serReadByte(x) << endl;
-            }
-            
+
+            cout << serReadByte(x) << endl;
+            while (serDataAvailable(x))
+                ; // 有数据读就读直到读完
         }
     }
-    
-    
     return 0;
 }
